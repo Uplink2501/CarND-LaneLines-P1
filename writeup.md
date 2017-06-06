@@ -60,3 +60,21 @@ The "challenge" video illustrates the need for additional pre-processing. The fi
 Another possible improvement would be to replace the arrays with a lightweight queue to handle steady streams of images while keeping processing and memory usage to a minimum.
 
 I'm also curious to try different methods of sampling the image by factoring distant or long-range scene separately from the proximal or near-range scene.
+
+### Reference material
+
+Linear Regressions
+- https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.lstsq.html
+- http://glowingpython.blogspot.fi/2012/03/linear-regression-with-numpy.html
+
+"Fancy Indexing" - https://docs.scipy.org/doc/numpy/user/basics.indexing.html#other-indexing-options
+
+Apply function to multiple columns - https://stackoverflow.com/questions/16353729/pandas-how-to-use-apply-function-to-multiple-columns
+
+Numpy apply along axis - https://docs.scipy.org/doc/numpy/reference/generated/numpy.apply_along_axis.html
+
+BRG - RGB color convert code - http://www.bogotobogo.com/python/OpenCV_Python/python_opencv3_matplotlib_rgb_brg_image_load_display_save.php
+
+
+
+
