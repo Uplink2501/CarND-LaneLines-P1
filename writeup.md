@@ -2,8 +2,6 @@
 
 ---
 
-**Finding Lane Lines on the Road**
-
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
@@ -13,7 +11,7 @@ The goals / steps of this project are the following:
 ### Reflection
 
 My pipeline followed a fairly common pre-processing flow used in computer vision. The main steps consisted of the following:
-* Grayscale             - Create a single channel image binary
+* Grayscale             - Create a single channel image
 * Gaussian Blur         - Remove noise
 * Canny edge detection  - w/auto-threshold. Bring out edge pixels along high contrast boundaries
 * Region of Interest    - Apply an image mask to exclude properties outside a defined region
@@ -22,12 +20,27 @@ My pipeline followed a fairly common pre-processing flow used in computer vision
 
 In order to draw a single line on the left and right, I modified the draw_lines() function by first separating the lines by slope by applying an index mask (a.k.a. "Fancy Indexing"). Each group of lines is then sent through a linear regression to identify individual line slopes and axis intercepts. These were then mean averaged to a single line segment and extending from the bottom border to reasonable vantage point.
 
+
+First, I simplify the pallette by working with a single color channel.
 ![Grayscale](test_images_output/gray.png)
-![Blured](test_images_output/blur_gray.png)
+
+Applied Gaussian Blur. This is in addition to the noise smoothing applied by the Canny algorithm.
+![Blurred](test_images_output/blur_gray.png)
+
+Edges detected!
 ![Canny](test_images_output/edges.png)
+
+Focus attention to consider only a specific region by applying a mask.
 ![Region of Interest](test_images_output/masked_edges.png)
-![Hough Lines](test_images_output/line_img.png)
-![Alpha Blended](test_images_output/final_image.png)
+
+Hough space magic made visible by drawing detected lines to a separate layer.
+![Hough Lines](test_images_output/hough_lines_img.png)
+
+Alpha blend the original image with the hough lines image
+![Alpha Blended](test_images_output/hough_weighted_img.png)
+
+And finally, turn the detected hough lines into a single averaged line for the left and right lane lines.
+![Final Result](test_images_output/final_image.png)
 
 
 ### 2. Potential shortcomings with the current pipeline
