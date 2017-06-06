@@ -7,6 +7,9 @@ The goals / steps of this project are the following:
 * Reflect on your work in a written report
 
 ---
+Test videos:
+* [SolidWhiteRight](test_videos_output/solidWhiteRight.mp4)
+* [SolidYellowLeft](test_videos_output/solidYellowLeft.mp4)
 
 ### Reflection
 
@@ -34,13 +37,14 @@ Focus attention to consider only a specific region by applying a mask.
 ![Region of Interest](test_images_output/masked_edges.png)
 
 Hough space magic made visible by drawing detected lines to a separate layer.
-![Hough Lines](test_images_output/hough_lines_img.png)
+![Hough Lines](test_images_output/hough_lines_rgb.png)
 
 Alpha blend the original image with the hough lines image
-![Alpha Blended](test_images_output/hough_weighted_img.png)
+![Alpha Blended](test_images_output/hough_weighted_rgb.png)
 
-And finally, turn the detected hough lines into a single averaged line for the left and right lane lines.
-![Final Result](test_images_output/final_image.png)
+Now, turn the detected hough lines into a single averaged line for the left and overlay with the original image.
+![Lane Lines](test_images_output/lane_lines_rgb.png)
+
 
 
 ### 2. Potential shortcomings with the current pipeline
