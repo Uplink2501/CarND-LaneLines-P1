@@ -67,6 +67,8 @@ Linear Regressions
 - https://docs.scipy.org/doc/numpy/reference/generated/numpy.linalg.lstsq.html
 - http://glowingpython.blogspot.fi/2012/03/linear-regression-with-numpy.html
 
+Auto-Canny thresholds - https://stackoverflow.com/questions/4292249/automatic-calculation-of-low-and-high-thresholds-for-the-canny-operation-in-open
+ 
 "Fancy Indexing" - https://docs.scipy.org/doc/numpy/user/basics.indexing.html#other-indexing-options
 
 Apply function to multiple columns - https://stackoverflow.com/questions/16353729/pandas-how-to-use-apply-function-to-multiple-columns
